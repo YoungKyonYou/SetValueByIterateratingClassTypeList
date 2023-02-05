@@ -73,13 +73,12 @@ public class FieldIterateTest {
 
     }
 
-    public <T> Object trimStringData(Object object){
+    public Object trimStringData(Object object){
         System.out.println(object.getClass());
         Field[] fields = Tracking.class.getDeclaredFields();
-
         //리스트 일경우
         if(object instanceof List){
-            for(T obj : (List<T>)object){
+            for(Object obj : (List<Object>)object){
                 for (Field field : fields) {
 
                     field.setAccessible(true);
